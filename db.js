@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
-const URI = "mongodb+srv://Huzaifa:Afiazuh2006@forum.sn1gxse.mongodb.net/";
+require("dotenv").config();
 
+const URL = process.env.DATABASE;
 
-const connect = mongoose.connect(URI, {
+const connect = mongoose.connect(URL, {
     
 }).then(()=>console.log("Connected to the database"))
 .catch((e)=>console.log("Connection Failed"));
